@@ -115,7 +115,9 @@ Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3
     - `...`
     - `📄 ClassE_cAMP_cAMP.txt`
 
-Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/processing-bias-profs.ipynb`](/jupyter/processing-bias-profs.ipynb) から利用可能です
+Jupyter Notebook は以下から利用可能です
+- データセットの加工（グラフ表示画像の作成・ラベルCSV作成）：[<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/processing-bias-profs.ipynb`](/jupyter/processing-bias-profs.ipynb)
+- 機械学習：[<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/vit-bias-profs.ipynb`](/jupyter/vit-bias-profs.ipynb)
 
 
 ### 5.2 InterPro Dataset
