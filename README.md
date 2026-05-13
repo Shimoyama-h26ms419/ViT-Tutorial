@@ -40,8 +40,19 @@ ViTの基本的な動かし方を説明するためのリポジトリです。
 1. [**Python公式ページ**](https://www.python.org/downloads/release/python-3144/) から **Python 3.14.4** をインストールします。
 2. `PATH` を通してターミナルからPythonを起動できるようにします。
 
+#### Windows
 ```
-> python -V
+python -V
+```
+
+#### Linux
+```
+python3.14 -V
+```
+
+以下のように **Python 3.14.4** が正常にインストールされているかを確認しましょう。
+
+```
 Python 3.14.4
 ```
 
@@ -49,34 +60,55 @@ Python 3.14.4
 このリポジトリをクローンしましょう。
 ディレクトリは分かりやすい場所ならばどこでも構いません。
 ```
-> git clone https://github.com/Shimoyama-h26ms419/ViT-Tutorial.git
+git clone https://github.com/Shimoyama-h26ms419/ViT-Tutorial.git
 ```
 
 次に、作業ディレクトリに移動します。
 ```
-> cd ./ViT-Tutorial
+cd ./ViT-Tutorial
 ```
 
 ### 4.3 仮想環境の作成
 仮想環境（venv）の作成を行います。
 以下のコマンドで仮想環境を `.venv` ディレクトリに作成します。
+
+#### Windows
 ```
-> py -3.14 -m venv ./.venv
+py -3.14 -m venv ./.venv
+```
+
+#### Linux
+```
+python3.14 -m venv ./.venv
 ```
 
 次に仮想環境をアクティブにします。
+
+#### Windows
 ```
-> ./.venv/Script/activate
+./.venv/Script/activate
+```
+
+#### Linux
+```
+source ./.venv/bin/activate
 ```
 
 コンソールのユーザー名の左に `(.venv)` と表示されれば OK です。
+
+#### Windows
 ```
 (.venv) PS C:\path\to\ViT-Tutorial>
 ```
 
+#### Linux
+```
+(.venv) user-name@computer-name:~/path/to/ViT-Tutorial$
+```
+
 仮想環境を非アクティブにしたいときは、以下のコマンドを実行します。
 ```
-> deactivate
+deactivate
 ```
 
 ### 4.4 必要ライブラリのインストール
@@ -84,9 +116,9 @@ Python 3.14.4
 以下のコマンドを順に実行してインストールします。
 
 ```
-> pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
-> pip install ipywidgets transformers[torch]
-> pip install -r requirements.txt
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+pip install ipywidgets transformers[torch]
+pip install -r requirements.txt
 ```
 
 インストールが終了したら、CUDAが対応してるかを確認しましょう。
@@ -115,7 +147,9 @@ Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3
     - `...`
     - `📄 ClassE_cAMP_cAMP.txt`
 
-Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/processing-bias-profs.ipynb`](/jupyter/processing-bias-profs.ipynb) から利用可能です
+Jupyter Notebook は以下から利用可能です
+- データセットの加工（グラフ表示画像の作成・ラベルCSV作成）：[<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/processing-bias-profs.ipynb`](/jupyter/processing-bias-profs.ipynb)
+- 機械学習：[<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/vit-bias-profs.ipynb`](/jupyter/vit-bias-profs.ipynb)
 
 
 ### 5.2 InterPro Dataset
@@ -140,8 +174,8 @@ Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3
 [📄 `/data/interpro-family.md`](/data/interpro-family.md) を参照してください
 
 ## 7. Notice
-> [!caution]
-> 工事中
+> [!note]
+> 現在工事中です
 
 ## 8. Future Prospects
 - [MaxViT](https://arxiv.org/abs/2204.01697) を使ってみる
@@ -150,6 +184,8 @@ Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3
 
 ## 9. References
 - Kawashima, Shuichi, and Minoru Kanehisa. "AAindex: amino acid index database." _Nucleic acids research_ 28.1 (2000): 374-374.
+- Davies, Matthew N., et al. "On the hierarchical classification of G protein-coupled receptors." _Bioinformatics_ 23.23 (2007): 3113-3118.
+- Blum, Matthias, et al. "InterPro: the protein sequence classification resource in 2025." _Nucleic acids research_ 53.D1 (2025): D444-D456.
 - Vaswani, Ashish, et al. "Attention is all you need." _Advances in neural information processing systems 30_ (2017).
 - Dosovitskiy, Alexey, et al. "An image is worth 16x16 words: Transformers for image recognition at scale." _arXiv preprint arXiv:2010.11929_ (2020).
 - 山口秀輝, and 齋藤裕. "タンパク質の言語モデル." _JSBi Bioinformatics Review_ 4.1 (2023): 52-67.
