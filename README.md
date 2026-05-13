@@ -73,27 +73,23 @@ Python 3.14.4
 (.venv) PS C:\path\to\ViT-Tutorial>
 ```
 
-以下のコマンドで仮想環境を非アクティブにします。
+仮想環境を非アクティブにしたいときは、以下のコマンドを実行します。
 ```
 > deactivate
 ```
 
 ### 4.4 必要ライブラリのインストール
 必要なライブラリなどを一括でインストールします。
-以下のコマンドによりインストールします。
+以下のコマンドを順に実行してインストールします。
 
-```
-> pip install -r requirements.txt
-```
-
-PyTorchは以下のコマンドにより別途インストールする必要があります。
 ```
 > pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130
+> pip install ipywidgets transformers[torch]
+> pip install -r requirements.txt
 ```
 
 インストールが終了したら、CUDAが対応してるかを確認しましょう。
 `cuda` が出ればGPU対応、`cpu` が出ればGPUは非対応です。
-
 ```python
 import torch
 
@@ -130,12 +126,8 @@ Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3
 #### Class
 [📄 `/data/interpro-class.md`](/data/interpro-class.md) を参照してください
 
-
 #### Family
 [📄 `/data/interpro-family.md`](/data/interpro-family.md) を参照してください
-
-
-
 
 ## 7. Notice
 > [!caution]
