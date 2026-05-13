@@ -23,6 +23,7 @@ ViTの基本的な動かし方を説明するためのリポジトリです。
   - [📂 `data`](/data)（データセットなどを保管する）
   - [📂 `images`](/data)（作成した画像データを保管する）
   - [📂 `jupyter`](/jupyter)（Jupyter Notebookを保管する）
+  - [📂 `labels`](/jupyter)（ラベルデータを保管する）
   - [📂 `models`](/models)（作成したモデルを保管する）
   - [📄 `app.py`](/app.py)（Flaskの起動ファイル）
   - [📄 `requirements.txt`](/requirements.txt)（pipの依存関係の一覧）
@@ -104,8 +105,17 @@ MNIST Datasetを用いてVision Transformerの画像分類の汎化性能を評�
 Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/vit-mnist.ipynb`](/jupyter/vit-mnist.ipynb) から利用できます。
 
 ### 5.1 BIAS-PROFS Dataset
-> [!note]
-> 現在工事中です
+[**BIAS-PROFS**](https://www.cs.kent.ac.uk/projects/biasprofs/files/gds_dataset.zip) から `gds_dataset.zip` をダウンロードします。
+
+解凍して以下のような構造にします。
+
+- [`📂 data`](/data)
+  - `📂 gds_dataset`
+    - `📄 ClassA_Adrenergic_Adrenergic.txt`
+    - `...`
+    - `📄 ClassE_cAMP_cAMP.txt`
+
+Jupyter Notebook は [<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/processing-bias-profs.ipynb`](/jupyter/processing-bias-profs.ipynb) から利用可能です
 
 
 ### 5.2 InterPro Dataset
