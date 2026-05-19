@@ -153,8 +153,39 @@ Jupyter Notebook は以下から利用可能です
 
 
 ### 5.2 InterPro Dataset
-> [!note]
-> 現在工事中です
+InterPro/Unreviewed は BIAS-PROFS に比べ、データ数が非常に多いです。
+
+なので、FASTA形式で直接ダウンロードすることができません。
+
+Python の `urllib` を使ってダウンロードします。
+
+ダウンロードスクリプトは [<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/download-interpro.ipynb`](/jupyter/download-interpro.ipynb) から利用できます。
+
+ダウンロードが完了すると以下のような構造になります。
+
+- [`📂 data`](/data)
+  - `📂 interpro`
+    - `📂 A`
+      - `📄 IPR000018.fasta`
+      - `...`
+    - `📂 B`
+      - `📄 IPR001740.fasta`
+      - `...`
+    - `📂 C`
+      - `📄 IPR000162.fasta`
+      - `...`
+    - `📂 D`
+      - `📄 IPR000366.fasta`
+      - `...`
+    - `📂 E`
+      - `📄 IPR022340.fasta`
+    - `📂 F`
+      - `📄 IPR026543.fasta`
+      - `...`
+
+Jupyter Notebook は以下から利用可能です
+- データセットの加工（グラフ表示画像の作成・ラベルCSV作成）：[<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/processing-interpro.ipynb`](/jupyter/processing-interpro.ipynb)
+- 機械学習：[<img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg" width=16px height=16px> `/jupyter/vit-interpro.ipynb`](/jupyter/vit-interpro.ipynb)
 
 ## 6. Dataset
 使用したデータセットは以下の通りです。
@@ -176,6 +207,9 @@ Jupyter Notebook は以下から利用可能です
 ## 7. Notice
 > [!note]
 > 現在工事中です
+
+- CPU 版の PyTorch をインストールしないように気をつけましょう。
+- InterPro データセットのダウンロードはかなりの時間が掛かるので、ネットワークの切断などに気をつけましょう。
 
 ## 8. Future Prospects
 - [MaxViT](https://arxiv.org/abs/2204.01697) を使ってみる
